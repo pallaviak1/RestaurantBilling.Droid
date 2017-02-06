@@ -113,6 +113,7 @@
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DialogService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\AllBillsView.cs" />
     <Compile Include="Views\BillView.cs" />

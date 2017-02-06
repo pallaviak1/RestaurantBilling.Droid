@@ -1,3 +1,4 @@
+MVVMCRoss:-
 
 This solution is working copy for android project and core library, not working for ios and universal app. 
 This is MVVMCross sample referred url is :
@@ -5,7 +6,12 @@ https://sites.google.com/site/netdeveloperblog/xamarin/mvvmcross/learn/part1
 
 Explored thinghs:-
 activities, sqlite connection, mvvmcross in xamarin, portable class library for core functionality
+_____________________________________________
 
+
+DialoghService :-
+This sample also has dialogservice implementation, showing dialog is in UI specific project however interface is present in core, core is calling show dialog in viewmodel.
+_____________________________________________
 
 
 

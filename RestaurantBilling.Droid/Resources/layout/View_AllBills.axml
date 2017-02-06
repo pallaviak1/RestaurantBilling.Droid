@@ -7,6 +7,7 @@
   <Mvx.MvxListView
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
-      local:MvxBind="ItemsSource AllBills"
+      
+      local:MvxBind="ItemsSource AllBills; ItemClick BillClickedCommand"
       local:MvxItemTemplate="@layout/listitem_bill" />
 </LinearLayout>

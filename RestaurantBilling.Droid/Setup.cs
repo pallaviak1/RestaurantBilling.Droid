@@ -1,9 +1,11 @@
 using Android.Content;
+using CoreLib.Interfaces;
 using CoreLib.Repositories;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Platform;
 using RestaurantBilling.Core;
+using RestaurantBilling.UI.Droid.Services;
 
 namespace RestaurantBilling.UI.Droid
 {
@@ -29,6 +31,12 @@ namespace RestaurantBilling.UI.Droid
             var dbConn = FileAccessHelper.GetLocalFilePath("restaurant.db3");
             Mvx.RegisterSingleton(new Repository(dbConn));
             return new App();
+        }
+
+        protected override void InitializeIoC()
+        {
+            base.InitializeIoC();
+            Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
         }
     }
 }

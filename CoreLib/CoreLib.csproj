@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Interfaces\IDialogService.cs" />
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CustomAppStart.cs" />
