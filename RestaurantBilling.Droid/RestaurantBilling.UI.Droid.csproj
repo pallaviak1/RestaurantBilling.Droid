@@ -117,6 +117,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Views\AllBillsView.cs" />
     <Compile Include="Views\BillView.cs" />
+    <Compile Include="Views\ChangeCurrencySettingView.cs" />
     <Compile Include="Views\MainMenuView.cs" />
     <Compile Include="Views\SplashScreenView.cs" />
   </ItemGroup>
@@ -140,6 +141,7 @@
     <AndroidResource Include="Resources\layout\View_AllBills.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\View_ChangeCurrencySetting.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

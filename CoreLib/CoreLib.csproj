@@ -40,10 +40,13 @@
     <Compile Include="Class1.cs" />
     <Compile Include="CustomAppStart.cs" />
     <Compile Include="Interfaces\IBillCalculator.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Services\BillCalculator.cs" />
     <Compile Include="ViewModels\BillViewModel.cs" />
+    <Compile Include="ViewModels\ChangeCurrencySettingViewModel.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

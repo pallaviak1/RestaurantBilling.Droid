@@ -16,4 +16,10 @@
         android:text="View Bills"
         android:textSize="40dp"
         local:MvxBind="Click NavigateAllBills" />
+   <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Currency"
+        android:textSize="40dp"
+        local:MvxBind="Click NavigateChangeCurrencySetting" />
 </LinearLayout>

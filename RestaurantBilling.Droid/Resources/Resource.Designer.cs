@@ -102,11 +102,17 @@ namespace RestaurantBilling.UI.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f040003
+			public const int CurrenciesSpinner = 2130968579;
+			
 			// aapt resource value: 0x7f040000
 			public const int MvvmCrossTagId = 2130968576;
 			
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int textView1 = 2130968578;
 			
 			static Id()
 			{
@@ -131,10 +137,13 @@ namespace RestaurantBilling.UI.Droid
 			public const int View_Bill = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int View_MainMenu = 2130903043;
+			public const int View_ChangeCurrencySetting = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int View_SplashScreen = 2130903044;
+			public const int View_MainMenu = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int View_SplashScreen = 2130903045;
 			
 			static Layout()
 			{

@@ -27,6 +27,17 @@ namespace RestaurantBilling.Core.ViewModels
                 return new MvxCommand(() => ShowViewModel<AllBillsViewModel>());
             }
         }
+
+        public ICommand NavigateChangeCurrencySetting
+        {
+            get
+            {
+                // Navigation Note:
+                // Must add following value to Assembly.cs for any Windows projects to see the lambda.
+                // [assembly: InternalsVisibleTo("Cirrious.MvvmCross")]
+                return new MvxCommand(() => ShowViewModel<ChangeCurrencySettingViewModel>());
+            }
+        }
     }
 }
 

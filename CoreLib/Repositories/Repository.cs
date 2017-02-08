@@ -1,4 +1,5 @@
-﻿using RestaurantBilling.Core;
+﻿using CoreLib.Models;
+using RestaurantBilling.Core;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -42,5 +43,34 @@ namespace CoreLib.Repositories
             // Return a list of bills saved to the Bill table in the database.
             return conn.Table<Bill>().ToListAsync();
         }
+
+        #region Currency
+        private static readonly List<Currency> AllAvailableCurrencies = new List<Currency>
+        {
+            new Currency { CurrencyId = 1, CurrencyName = "Dollar", CurrencySymbol = "$"},
+            new Currency { CurrencyId = 2, CurrencyName = "Euro", CurrencySymbol = "€"},
+            new Currency { CurrencyId = 3, CurrencyName = "Pound", CurrencySymbol = "£"}
+        };
+        private Currency _activeCurrency;
+
+        public List<Currency> GetAvailableCurrencies()
+        {
+            return AllAvailableCurrencies;
+        }
+
+        public Currency GetCurrencyById(int currencyId)
+        {
+            return AllAvailableCurrencies[currencyId];
+        }
+
+        public void SetActiveCurrency(Currency currency)
+        {
+            _activeCurrency = currency;
+        }
+        public Currency GetActiveCurrency()
+        {
+            return _activeCurrency ?? (_activeCurrency = GetCurrencyById(1));
+        } 
+        #endregion
     }
 }
