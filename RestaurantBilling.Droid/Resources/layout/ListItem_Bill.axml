@@ -17,14 +17,14 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal"
       android:layout_margin="10dp">
-    <TextView
-        android:text="Sub Total"
+    <TextView     
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="16dp"
         android:layout_width="90dp"
-        android:layout_height="wrap_content" />
-    <TextView
+        android:layout_height="wrap_content"
+        local:MvxLang="Text CustomerEmailTextView" />
+     <TextView
         android:layout_alignParentBottom="true"
         android:layout_width="50dp"
         android:layout_height="wrap_content"

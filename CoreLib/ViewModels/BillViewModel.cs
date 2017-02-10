@@ -1,12 +1,16 @@
 ﻿using CoreLib.Repositories;
+using CoreLib.ViewModels;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Localization;
 using MvvmCross.Platform;
+using MvvmCross.Plugins.Messenger;
+using RestaurantBilling.Core;
 using RestaurantBilling.Core.Interfaces;
 using System.Windows.Input;
 
-namespace RestaurantBilling.Core.ViewModels
+namespace CoreLib.ViewModels
 {
-    public class BillViewModel : MvxViewModel
+    public class BillViewModel : BaseViewModel
     {
         readonly IBillCalculator _calculation;
         Bill _bill;
@@ -68,7 +72,7 @@ namespace RestaurantBilling.Core.ViewModels
         /// Use constructor injection to supply _calculation with the implementation.
         /// </summary>
         /// <param name="calculation"></param>
-        public BillViewModel(IBillCalculator calculation)
+        public BillViewModel(IMvxMessenger messenger, IBillCalculator calculation) : base(messenger)
         {
             _calculation = calculation;
         }
@@ -97,6 +101,7 @@ namespace RestaurantBilling.Core.ViewModels
                 });
             }
         }
+
 
         public void Init(Bill bill = null)
         {

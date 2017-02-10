@@ -53,24 +53,31 @@ namespace CoreLib.Repositories
         };
         private Currency _activeCurrency;
 
-        public List<Currency> GetAvailableCurrencies()
+        public Task<List<Currency>> GetAvailableCurrencies()
         {
-            return AllAvailableCurrencies;
+            return Task.Run(() => AllAvailableCurrencies);            
         }
 
-        public Currency GetCurrencyById(int currencyId)
+        public Task<Currency> GetCurrencyById(int currencyId)
         {
-            return AllAvailableCurrencies[currencyId];
+            return Task.Run(() => AllAvailableCurrencies[currencyId]);
         }
 
         public void SetActiveCurrency(Currency currency)
         {
-            _activeCurrency = currency;
+             _activeCurrency = currency;
         }
-        public Currency GetActiveCurrency()
+        public Task<Currency> GetActiveCurrency()
         {
-            return _activeCurrency ?? (_activeCurrency = GetCurrencyById(1));
-        } 
+            if (_activeCurrency == null)
+            {
+                Task<Currency> task = GetCurrencyById(1);
+                task.Wait();
+                _activeCurrency = task.Result;
+            }
+            return Task.Run(() => _activeCurrency);
+        }
+       
         #endregion
     }
 }

@@ -3,9 +3,12 @@ using CoreLib.Interfaces;
 using CoreLib.Repositories;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
+using MvvmCross.Localization;
 using MvvmCross.Platform;
+using MvvmCross.Platform.Converters;
 using RestaurantBilling.Core;
 using RestaurantBilling.UI.Droid.Services;
+using System.Threading;
 
 namespace RestaurantBilling.UI.Droid
 {
@@ -30,7 +33,7 @@ namespace RestaurantBilling.UI.Droid
         {
             var dbConn = FileAccessHelper.GetLocalFilePath("restaurant.db3");
             Mvx.RegisterSingleton(new Repository(dbConn));
-            return new App();
+            return new App(Thread.CurrentThread.CurrentUICulture);
         }
 
         protected override void InitializeIoC()
@@ -38,5 +41,12 @@ namespace RestaurantBilling.UI.Droid
             base.InitializeIoC();
             Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
         }
+
+
+       //protected override void FillValueConverters(IMvxValueConverterRegistry registry)
+       // {
+       //     base.FillValueConverters(registry);
+       //     registry.AddOrOverwrite("Language", new MvxLanguageConverter());
+       // }
     }
 }

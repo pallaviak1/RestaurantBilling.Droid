@@ -1,11 +1,15 @@
-﻿using CoreLib.ViewModels;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using System.Windows.Input;
+using MvvmCross.Plugins.Messenger;
 
-namespace RestaurantBilling.Core.ViewModels
+namespace CoreLib.ViewModels
 {
-    public class MainMenuViewModel : MvxViewModel
+    public class MainMenuViewModel : BaseViewModel
     {
+        public MainMenuViewModel(IMvxMessenger messenger) : base(messenger)
+        {
+        }
+
         public ICommand NavigateCreateBill
         {
             get

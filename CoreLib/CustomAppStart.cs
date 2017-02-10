@@ -1,5 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
-using RestaurantBilling.Core.ViewModels;
+﻿using CoreLib.ViewModels;
+using MvvmCross.Core.ViewModels;
 namespace RestaurantBilling.Core
 {
     /// <summary>

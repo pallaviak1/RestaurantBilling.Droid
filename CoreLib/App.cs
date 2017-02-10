@@ -1,7 +1,10 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using CoreLib.Services;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Localization;
 using MvvmCross.Platform;
 using RestaurantBilling.Core.Interfaces;
 using RestaurantBilling.Core.Services;
+using RestaurantBilling.Localization;
 
 namespace RestaurantBilling.Core
 {
@@ -17,7 +20,7 @@ namespace RestaurantBilling.Core
         /// <summary>
         /// Setup IoC registrations.
         /// </summary>
-        public App()
+        public App(System.Globalization.CultureInfo currentCulture)
         {
             // Whenever Mvx.Resolve is used, a new instance of Calculation is provided.
             Mvx.RegisterType<IBillCalculator, BillCalculator>();
@@ -30,6 +33,10 @@ namespace RestaurantBilling.Core
 
             // Another option is to utilize a default App Start object with 
             // var appStart = new MvxAppStart<TipViewModel>();
+            Mvx.RegisterSingleton<IMvxTextProvider>
+              (new ResxTextProvider(Strings.ResourceManager, currentCulture));
+
+
         }
     }
 }

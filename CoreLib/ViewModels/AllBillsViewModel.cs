@@ -6,17 +6,24 @@ using System.Windows.Input;
 using RestaurantBilling.Core;
 using CoreLib.Repositories;
 using CoreLib.Interfaces;
+using MvvmCross.Plugins.Messenger;
+using CoreLib.Message;
+using CoreLib.Models;
+using MvvmCross.Localization;
 
 namespace CoreLib.ViewModels
 {
-    public class AllBillsViewModel : MvxViewModel
+    public class AllBillsViewModel : BaseViewModel
     {
         IDialogService _dialogService = null;
-        public AllBillsViewModel(IDialogService dialogService)
+        public AllBillsViewModel(IMvxMessenger messenger, IDialogService dialogService) : base(messenger)
         {
             _dialogService = dialogService;
+            InitializeMessenger();
         }
         public List<Bill> AllBills { get; set; }
+
+        public string ShowAlertMessage { get; set; }
 
         public ICommand NavBack
         {
@@ -26,12 +33,18 @@ namespace CoreLib.ViewModels
             }
         }
 
+    
+
         public ICommand BillClickedCommand
         {
             get
             {
                 return new MvxCommand<Bill>((bill) => {
-                    _dialogService.ShowAlertAsync(string.Format("List is clicked having details Bill Name: {0}, AmountPaid : {1}", bill.CustomerEmail, bill.AmountPaid), "_____Item____", "Got it!");
+                    // _dialogService.ShowAlertAsync(string.Format("List is clicked having details Bill Name: {0}, AmountPaid : {1}", bill.CustomerEmail, bill.AmountPaid), "_____Item____", "Got it!");
+                    _dialogService.ShowAlertAsync(
+                        string.Format(TextSource.GetText("InformationReceivedMessage"), bill.CustomerEmail, bill.AmountPaid), 
+                        TextSource.GetText("InformationReceivedHeader"), 
+                        TextSource.GetText("InformationReceivedButtonText"));
                 });
             }
         }
@@ -45,6 +58,11 @@ namespace CoreLib.ViewModels
             result.Wait();
             AllBills = result.Result;
             //_dialogService.ShowAlertAsync("List is loaded", "_____Good News____", "Got it!");
+        }
+        private void InitializeMessenger()
+        {
+            //reload all bills with new currency
+            Messenger.Subscribe<MyAlertMessage>((e) => { Mvx.Trace("Message received! {0}", e.MyMessage); ShowAlertMessage = e.MyMessage; });
         }
     }
 }

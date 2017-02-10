@@ -4,7 +4,7 @@ using MvvmCross.Droid.Views;
 
 namespace RestaurantBilling.UI.Droid.Views
 {
-    [Activity(Label = "Create Bill", NoHistory = true)]
+    [Activity(Label = "Bill", NoHistory = true)]
     public class BillView : MvxActivity
     {
         /// <summary>

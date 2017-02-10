@@ -7,10 +7,16 @@ https://sites.google.com/site/netdeveloperblog/xamarin/mvvmcross/learn/part1
 
 Explored thinghs in this application :-
 - activities
-- sqlite connection (sqlite connection in mvvm structure)
+- sqlite connection 
+            (sqlite connection in mvvm structure)
 - mvvmcross in xamarin
 - portable class library for core functionality
-- DialoghService (This sample also has dialogservice implementation, showing dialog is in UI specific project however interface is present in core, core is calling show dialog in viewmodel.)
+- DialogService 
+              (This sample also has dialogservice implementation, showing dialog is in UI specific project however interface is present in core, core is calling show dialog in viewmodel.)
+- Messaging 
+              (communication in between view models, added plugin in core and droid project - MVVMCross.plugin.messeging)
+- show web page in browser using browser plugin
+- Localization using resx file
 _____________________________________________
 
 
@@ -18,7 +24,13 @@ _____________________________________________
 
 
 
-
+____________ Localization ways _____________
+Option to translate the app
+1. .json files
+2. .resx files  - explored - MvxLanguageBinder available in MVVMCross, <TextView local: MvxLang = "Text val, Source=TextSource" in android,
+                  
+              
+3. own implementation (xml)
 
 
 

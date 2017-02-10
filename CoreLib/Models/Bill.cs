@@ -35,7 +35,9 @@ namespace RestaurantBilling.Core
         public bool IsValid()
         {
             return (AmountPaid != 0 && !String.IsNullOrWhiteSpace(CustomerEmail));
+
         }
+        
     }
 }
 
