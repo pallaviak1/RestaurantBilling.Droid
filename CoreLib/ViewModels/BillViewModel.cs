@@ -15,6 +15,7 @@ namespace CoreLib.ViewModels
         readonly IBillCalculator _calculation;
         Bill _bill;
         int _gratuity;
+            
 
         public string CustomerEmail
         {

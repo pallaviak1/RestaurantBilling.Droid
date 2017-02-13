@@ -1,4 +1,5 @@
 ﻿using MvvmCross.Localization;
+using MvvmCross.Platform;
 using System.Globalization;
 using System.Resources;
 
@@ -18,6 +19,7 @@ namespace CoreLib.Services
 
         public string GetText(string namespaceKey, string typeKey, string name)
         {
+           // Mvx.Trace("****************ResxTextProvider GetText**************************");
             string resolvedKey = name;
 
             if (!string.IsNullOrEmpty(typeKey))
@@ -29,7 +31,7 @@ namespace CoreLib.Services
             {
                 resolvedKey = $"{namespaceKey}.{resolvedKey}";
             }
-
+           // Mvx.Trace("****************ResxTextProvider resolvedKey = {0}", resolvedKey);
             return _resourceManager.GetString(resolvedKey, CurrentLanguage);
         }
 

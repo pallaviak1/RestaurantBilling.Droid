@@ -8,7 +8,10 @@ using MvvmCross.Platform;
 using MvvmCross.Platform.Converters;
 using RestaurantBilling.Core;
 using RestaurantBilling.UI.Droid.Services;
+using System.Collections.Generic;
+using System.Reflection;
 using System.Threading;
+using System.Linq;
 
 namespace RestaurantBilling.UI.Droid
 {
@@ -41,12 +44,20 @@ namespace RestaurantBilling.UI.Droid
             base.InitializeIoC();
             Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
         }
+        //protected virtual IEnumerable<Assembly> ValueConverterAssemblies { get; }
 
+        protected override IEnumerable<Assembly> ValueConverterAssemblies
+        {
+            get
+            {
+                return base.ValueConverterAssemblies.Concat(new[] { typeof(MvxLanguageConverter).Assembly });
+            }
+        }
 
-       //protected override void FillValueConverters(IMvxValueConverterRegistry registry)
-       // {
-       //     base.FillValueConverters(registry);
-       //     registry.AddOrOverwrite("Language", new MvxLanguageConverter());
-       // }
+        //protected override void FillValueConverters(IMvxValueConverterRegistry registry)
+        //{
+        //    base.FillValueConverters(registry);
+        //    registry.AddOrOverwrite("Language", new MvxLanguageConverter() );
+        //}
     }
 }

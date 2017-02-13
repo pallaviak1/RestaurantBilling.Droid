@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AllBillsViewModel.CustomerEmailTextView" xml:space="preserve">
-    <value>DE Customer Email</value>
-  </data>
   <data name="AllBillsViewModel.InformationReceivedButtonText" xml:space="preserve">
     <value>DE_Got it!</value>
   </data>
@@ -129,7 +126,10 @@
   <data name="AllBillsViewModel.InformationReceivedMessage" xml:space="preserve">
     <value>DE_List is clicked having details Bill Name: {0}, AmountPaid : {1}</value>
   </data>
-  <data name="BillViewModel.CustomerEmailTextView" xml:space="preserve">
-    <value>b email</value>
+  <data name="Bill.CustomerEmailTextView" xml:space="preserve">
+    <value>DE Customer Email</value>
+  </data>
+  <data name="MainMenuViewModel.ViewBillsResourceText" xml:space="preserve">
+    <value>UK View Bills</value>
   </data>
 </root>

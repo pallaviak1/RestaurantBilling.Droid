@@ -14,8 +14,11 @@ namespace CoreLib.ViewModels
         {
             Messenger = messenger;
         }
-        public IMvxLanguageBinder TextSource =>
-            new MvxLanguageBinder("", GetType().Name);
+      
+        public virtual IMvxLanguageBinder TextSource
+        {
+            get { return new MvxLanguageBinder("", GetType().Name); }
+        }
 
         protected async Task ReloadDataAsync()
         {

@@ -62,23 +62,13 @@ namespace RestaurantBilling.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to US Customer Email.
+        ///   Looks up a localized string similar to Departure datePPPP:.
         /// </summary>
-        public static string AllBillsViewModel_CustomerEmailTextView {
+        public static string AllBillsViewModel_DepartureDateTextView {
             get {
-                return ResourceManager.GetString("AllBillsViewModel.CustomerEmailTextView", resourceCulture);
-            }
-        }
-
-        public static string AllBillsViewModel_DepartureDateTextView
-        {
-            get
-            {
                 return ResourceManager.GetString("AllBillsViewModel.DepartureDateTextView", resourceCulture);
             }
         }
-
-       
         
         /// <summary>
         ///   Looks up a localized string similar to US Got it!.
@@ -108,11 +98,20 @@ namespace RestaurantBilling.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to c email.
+        ///   Looks up a localized string similar to US Customer Email.
         /// </summary>
-        public static string BillViewModel_CustomerEmailTextView {
+        public static string Bill_CustomerEmailTextView {
             get {
-                return ResourceManager.GetString("BillViewModel.CustomerEmailTextView", resourceCulture);
+                return ResourceManager.GetString("Bill.CustomerEmailTextView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to US View Bills.
+        /// </summary>
+        public static string MainMenuViewModel_ViewBillsResourceText {
+            get {
+                return ResourceManager.GetString("MainMenuViewModel.ViewBillsResourceText", resourceCulture);
             }
         }
     }

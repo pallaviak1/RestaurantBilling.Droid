@@ -12,10 +12,10 @@
       local:MvxBind="Click NavigateCreateBill" />
   <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="View Bills"
+        android:layout_height="wrap_content"       
         android:textSize="40dp"
-        local:MvxBind="Click NavigateAllBills" />
+        local:MvxLang="Text ViewBillsResourceText"
+        local:MvxBind="Click NavigateAllBills" /> <!-- android:text="View Bills"-->
    <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,6 @@
-﻿using SQLite;
+﻿using MvvmCross.Localization;
+using MvvmCross.Platform;
+using SQLite;
 using System;
 
 namespace RestaurantBilling.Core
@@ -35,9 +37,16 @@ namespace RestaurantBilling.Core
         public bool IsValid()
         {
             return (AmountPaid != 0 && !String.IsNullOrWhiteSpace(CustomerEmail));
-
         }
-        
+
+        public IMvxLanguageBinder TextSource
+        {
+            get {
+                //Mvx.Trace("****************TextSource get in bill.cs**************************");
+                return new MvxLanguageBinder("", GetType().Name);
+            }
+        }
+
     }
 }
 
