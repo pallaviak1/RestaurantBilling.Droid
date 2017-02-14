@@ -129,6 +129,9 @@
   <data name="Bill.CustomerEmailTextView" xml:space="preserve">
     <value>DE Customer Email</value>
   </data>
+  <data name="Bill.SubTotal" xml:space="preserve">
+    <value>UK SubTotal</value>
+  </data>
   <data name="MainMenuViewModel.ViewBillsResourceText" xml:space="preserve">
     <value>UK View Bills</value>
   </data>

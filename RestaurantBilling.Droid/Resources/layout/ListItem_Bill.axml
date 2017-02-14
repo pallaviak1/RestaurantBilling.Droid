@@ -23,7 +23,7 @@
         android:layout_marginRight="16dp"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
-        local:MvxLang="Text CustomerEmailTextView" />
+        local:MvxLang="Text SubTotal" />
      <TextView
         android:layout_alignParentBottom="true"
         android:layout_width="50dp"
