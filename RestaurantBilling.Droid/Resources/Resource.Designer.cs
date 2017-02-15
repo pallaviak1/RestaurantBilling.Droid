@@ -114,8 +114,17 @@ namespace RestaurantBilling.UI.Droid
 			// aapt resource value: 0x7f040004
 			public const int WebButton = 2130968580;
 			
+			// aapt resource value: 0x7f040007
+			public const int changeCurrencyButton = 2130968583;
+			
+			// aapt resource value: 0x7f040005
+			public const int createBillButton = 2130968581;
+			
 			// aapt resource value: 0x7f040002
 			public const int textView1 = 2130968578;
+			
+			// aapt resource value: 0x7f040006
+			public const int viewBillsButton = 2130968582;
 			
 			static Id()
 			{

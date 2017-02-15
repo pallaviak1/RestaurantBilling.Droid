@@ -29,6 +29,20 @@ namespace RestaurantBilling.Droid.UITest
         public void AppLaunches()
         {
             app.Screenshot("First screen.");
+            app.Repl();
+        }
+
+        [Test]
+        public void AppCreatesBillSuccessfully()
+        {
+            //app.WaitForElement(c=>c.Marked("Create Bill"));
+            app.WaitForElement(c => c.Id("createBillButton"));
+            //app.Tap(c => c.Marked("Create Bill"));
+            app.Tap(c => c.Id("createBillButton"));
+            //app.Repl();
+            //app.EnterText(AppQuery.;
+
+            
         }
     }
 }

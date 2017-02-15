@@ -9,17 +9,20 @@
       android:layout_height="wrap_content"
       android:text="Create Bill"
       android:textSize="40dp"
+      android:id="@+id/createBillButton"
       local:MvxBind="Click NavigateCreateBill" />
   <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"       
         android:textSize="40dp"
+        android:id="@+id/viewBillsButton"        
         local:MvxLang="Text ViewBillsResourceText"
         local:MvxBind="Click NavigateAllBills" /> <!-- android:text="View Bills"-->
    <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Change Currency"
+        android:id="@+id/changeCurrencyButton"       
         android:textSize="40dp"
         local:MvxBind="Click NavigateChangeCurrencySetting" />
 </LinearLayout>
