@@ -11,6 +11,7 @@
   <EditText
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:id="@+id/editTextCustomerEmail"
       local:MvxBind="Text CustomerEmail" />
   <TextView
       android:layout_width="match_parent"
@@ -19,6 +20,7 @@
   <EditText
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:id="@+id/editTextSubTotal"
       local:MvxBind="Text SubTotal" />
   <TextView
       android:layout_width="match_parent"
@@ -28,6 +30,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:max="100"
+      android:id="@+id/seekBarGratuity"
       local:MvxBind="Progress Gratuity" />
   <View
       android:layout_width="match_parent"
@@ -53,5 +56,6 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="Save"
+      android:id="@+id/saveButton"
       local:MvxBind="Click SaveBill" />
 </LinearLayout>

@@ -102,8 +102,8 @@ namespace RestaurantBilling.UI.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040003
-			public const int CurrenciesSpinner = 2130968579;
+			// aapt resource value: 0x7f040008
+			public const int CurrenciesSpinner = 2130968584;
 			
 			// aapt resource value: 0x7f040000
 			public const int MvvmCrossTagId = 2130968576;
@@ -111,20 +111,35 @@ namespace RestaurantBilling.UI.Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
+			// aapt resource value: 0x7f040009
+			public const int WebButton = 2130968585;
+			
+			// aapt resource value: 0x7f04000c
+			public const int changeCurrencyButton = 2130968588;
+			
+			// aapt resource value: 0x7f04000a
+			public const int createBillButton = 2130968586;
+			
+			// aapt resource value: 0x7f040003
+			public const int editTextCustomerEmail = 2130968579;
+			
 			// aapt resource value: 0x7f040004
-			public const int WebButton = 2130968580;
-			
-			// aapt resource value: 0x7f040007
-			public const int changeCurrencyButton = 2130968583;
-			
-			// aapt resource value: 0x7f040005
-			public const int createBillButton = 2130968581;
-			
-			// aapt resource value: 0x7f040002
-			public const int textView1 = 2130968578;
+			public const int editTextSubTotal = 2130968580;
 			
 			// aapt resource value: 0x7f040006
-			public const int viewBillsButton = 2130968582;
+			public const int saveButton = 2130968582;
+			
+			// aapt resource value: 0x7f040005
+			public const int seekBarGratuity = 2130968581;
+			
+			// aapt resource value: 0x7f040007
+			public const int textView1 = 2130968583;
+			
+			// aapt resource value: 0x7f040002
+			public const int textViewCustomerEmail = 2130968578;
+			
+			// aapt resource value: 0x7f04000b
+			public const int viewBillsButton = 2130968587;
 			
 			static Id()
 			{
