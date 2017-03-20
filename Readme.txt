@@ -1,5 +1,5 @@
-Xamarin android application using MVVMCross:-
-_____________________________________________
+Xamarin android application using MVVMCross using MvxActivity:-
+_______________________________________________________________
 
 This solution is working copy for android project and core library, not written for ios and universal app. 
 This is MVVMCross sample referred url is :
